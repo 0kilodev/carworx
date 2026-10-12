@@ -1,0 +1,7 @@
+[target.aarch64-unknown-linux-gnu]
+linker = "/home/ese/.local/bin/aarch64-linux-gnu-gcc"
+ar = "/home/ese/.local/bin/aarch64-linux-gnu-ar"
+
+[env]
+CC_aarch64_unknown_linux_gnu = "/home/ese/.local/bin/aarch64-linux-gnu-gcc"
+AR_aarch64_unknown_linux_gnu = "/home/ese/.local/bin/aarch64-linux-gnu-ar"

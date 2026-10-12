@@ -1,0 +1,30 @@
+[package]
+name = "carworx"
+version = "0.1.0"
+edition = "2021"
+authors = ["carworx"]
+description = "Universal automotive diagnostic and CAN bus platform"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dialoguer = { version = "0.11", default-features = false, features = ["editor"] }
+console = "0.15"
+comfy-table = "7.1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+anyhow = "1.0"
+thiserror = "1.0"
+libc = "0.2"
+eframe = "0.29"
+serde_yaml = "0.9"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = "z"     # Optimize for size
+lto = true          # Link Time Optimization
+codegen-units = 1   # Maximum optimization
+panic = "abort"     # Remove unwind tables
+strip = true        # Strip symbols
